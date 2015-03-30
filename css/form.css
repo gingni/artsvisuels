@@ -1,0 +1,149 @@
+@CHARSET "ISO-8859-1";
+
+form {
+	padding: 5px;
+	color: #4D4D4D;
+	width: 960px;
+}
+
+.formNavGauche { /*form moins grande quand il y a une div à gauche*/
+	width: 700px;
+}
+
+form li {
+	list-style: none;
+	margin-bottom: 5px;
+	margin-left: 5px;
+}
+
+fieldset {
+	padding: 10px;
+	min-height: 300px;
+	/*border: 1px solid #000;*/
+}
+
+#titre {
+	float: left;
+}
+
+textarea {
+	width: 400px;
+	margin-right: 50px;
+}
+
+select {
+	min-width: 350px;
+}
+
+#txtHint {
+	width: 400px;
+	display: block;
+	text-align: right;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-style: italic;
+	float: right;
+	color: red;
+	font-size: 10px;
+}
+
+label { /*float: left;
+	clear: left;*/
+	text-align: left;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	margin-right: 2px;
+}
+
+legend {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	margin: 5px 10px 5px 20px;
+}
+
+[type="submit"],[type="button"] {
+	/*clear: left;*/
+	float: right;
+	margin-right: 70px;
+	font-size: 16px;
+	min-height: 30px;
+	width: 200px;
+	padding: 5px;
+}
+
+[type="radio"] {
+	margin-right: 70px;
+}
+
+[type="file"] {
+	clear: right;
+	float: left;
+	margin: 0 10px 0 70px;
+	font-size: 16px;
+	min-height: 30px;
+}
+
+#div_infos {
+	border-top: solid #AAA;
+	border-bottom: solid #AAA;
+	border-width: 1px;
+	text-align: right;
+	margin: 20px 0 0 0;
+	padding: 10px 0 0 0;
+	text-align: right;
+}
+
+[type="text"],[type="password"] {
+	text-align: center;
+	min-width: 350px;
+	clear: left;
+	float: right;
+	margin: 0 50px 0 15px;
+	font-size: 12px;
+}
+
+input:focus {
+	background-color: #EAFDDC;
+}
+
+figcaption {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+blockquote {
+	-webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+	box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+	border-left: 0.5em solid #DDD;
+	border-width: 1px;
+	padding: 1px 0 1px 10px;
+	font-size: .8em;
+	font-style: italic;
+}
+
+blockquote:before {
+	display: block;
+	height: 0;
+	content: "\201C";
+	margin-left: -.95em;
+	font: italic 400%/1 Cochin, Georgia, "Times New Roman", serif;
+	color: #999;
+}
+
+/*-----------------------------------*/
+figcaption p {
+	margin: 4px 0 4px 100px;
+	font-style: italic;
+	font-size: .9em;
+	color: darkred
+}
+
+.selection {
+	margin-left: 4px;
+	margin-bottom: -2px;
+	font-size: .9em;
+}
+
+.etiquette {
+
+}

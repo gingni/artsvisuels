@@ -1,0 +1,423 @@
+@CHARSET "ISO-8859-1";
+
+body {
+	background-color: #888888;
+	width: 960px;
+	border-top: 1px solid black;
+}
+
+html {
+	margin: 0;
+	padding: 0;
+	background: #333;
+	font-family: Helvetica, sans-serif;
+	font-size:12.0pt;
+}
+
+body {
+	margin: auto;
+	margin-top: 10px;
+	padding-bottom: 5px;
+	width: 1200px;
+	border-top: 1px solid black;
+	border-bottom: none;
+	background: white;
+}
+
+h1,h2,h3 {
+	font-family: Georgia, Courrier, serif;
+}
+
+a {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: .8em;
+	text-decoration: none;
+	color: #333333;
+}
+
+a:VISITED {
+	text-decoration: none;
+	color: #333333;
+}
+
+#navigation {
+	display: block;
+	/*	border-bottom: thin;*/
+	text-align: center;
+	background-color: #000;
+	height: 31px;
+}
+
+#header {
+	min-width: 800px;
+	height: 115px;
+	border-bottom: thin solid #ccc;
+	border-top: thin solid #ccc;
+}
+
+#header h1,h2 {
+	margin: 0px;
+	margin-left: 30px;
+	font-size: 3em;
+	padding: 0px;
+}
+
+#header h1 {
+	color: #838383;
+	margin-top: 10px;
+	margin-bottom: 3px;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 4px;
+}
+
+#header h2 {
+	color: #444444;
+	font-size: 1.1em;
+	font-weight: 100;
+}
+
+#copyR {
+	font-size: 0.7em;
+}
+
+#gauche {
+	float: left;
+	width: 280px;
+	padding: 5px 20px 0 10px;
+	margin-top: 5px;
+	color: #444444;
+	font-size: 0.9em;
+}
+
+#droit {
+	float: left;
+	width: 600px;
+	padding: 0px 10px 0 10px;
+	margin-top: 10px;
+}
+
+#footer { /* 	border-top: 1px solid black; */
+	clear: both;
+	display: block;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #444444;
+	font-size: 0.9em;
+}
+
+#commentaire { 
+/* pour le temps du développement ?
+pour ajouter des informations sur le fonctionnement de l'application
+ça pourrait rester là*/
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-style: italic;
+color: #440000;
+font-size: 0.7em;
+margin-left: 20px;
+}
+
+#menu,#menu ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	line-height: 25px;
+	height: 29px;
+}
+
+#menu li {
+	display: inline;
+	float: left;
+	boder-right: 1px solid #fff;
+}
+/* ----------------------------------------------------------------------------------------- */
+/* http://fr.openclassrooms.com/informatique/cours/creer-un-menu-horizontal-deroulant-en-css */
+/* ----------------------------------------------------------------------------------------- */
+html>body #menu li {
+	border-right: 1px solid transparent;
+	/* on met une bordure transparente à droite de chaque élément */
+}
+
+#menu li ul ul {
+	margin: -22px 0 0 25%; /**/
+	/* On décale les sous-sous-listes pour qu'elles ne soient pas au dessus des sous-listes */
+	/* pour IE qui ne reconnaît pas "transparent" (comme précédemment) */
+	border-left: 1px solid #fff;
+	/* Petite bordure à gauche pour ne pas coller ... */
+}
+
+/* IE ne reconnaissant pas le sélecteur ">" */
+html>body #menu li ul ul {
+	border-left: 1px solid transparent;
+	/* on met une bordure transparente sur la gauche de chaque élément */
+}
+
+#menu li:hover ul ul,#menu li.sfhover ul ul
+/* Sous-sous-listes lorsque la souris passe sur un élément de liste */
+{
+	left: -999em;
+	/* On expédie les sous-sous-listes hors du champ de vision */
+}
+
+#menu li:hover ul,#menu li li:hover ul,#menu li.sfhover ul,#menu li li.sfhover ul
+/* Sous-listes lorsque la souris passe sur un élément de liste ET sous-sous-listes lorsque la souris passe sur un élément de sous-liste */
+{
+	left: auto; /* Repositionnement normal */
+	min-height: 0; /* Corrige un bug sous IE */
+	visibility: visible;
+}
+
+#menu li ul {
+	position: absolute;
+	width: 25%; /**/
+	visibility: hidden;
+}
+/* ----------------------------------------------------------------------------------------- */
+#menu a {
+	display: block;
+	color: #FFF;
+	background-color: #000;
+	min-width: 144px; /**/
+	padding: .2em 1em;
+	text-decoration: none;
+	padding: 3px 12px 3px 8px;
+	font-weight: bold;
+}
+
+a:hover {
+	color: #000;
+}
+
+#menu a:hover {
+	background-color: #FFF;
+	color: #000;
+}
+
+#contenu {
+	display: block;
+	min-height: 350px;
+	/* 	border-bottom: thin solid #ccc; */
+	border-top: thin solid #ccc;
+}
+
+.clear {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+
+#imageFull {
+	display: block;
+	width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#centre {
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+}
+
+#droit h3 {
+	font-size: 1.3em;
+	padding: 0px 0px 0px 10px;
+	margin: 0px;
+	color: #373737;
+}
+
+#centre h3 {
+	font-size: 1.3em;
+	padding: 0px 0px 0px 10px;
+	margin: 0px;
+	color: #373737;
+}
+
+#gauche h3 {
+	font-size: 1.3em;
+	padding: 0px;
+	margin: 0px;
+	color: #373737;
+}
+
+table {
+	font-size: .8em;
+	border: 1px solid #333;
+	min-width: 450px;
+	width:100%;
+	/* table-layout: fixed; */
+	border-collapse: collapse;
+	padding: 5px;
+}
+
+caption {
+	margin-bottom: 10px;
+	font-size: 2em;
+	font-weight: bold;
+}
+
+td,th {
+	color: #444444;
+	border: 1px solid #333;
+	text-align: center;
+	overflow: hidden;
+	padding: 5px;
+}
+
+th {
+	background: #333;
+	color: white;
+}
+
+span {
+	width: 160px;
+	height: 160px;
+}
+
+span.contenu {
+	display: inline-block;
+	overflow: hidden;
+	white-space: nowrap;
+	/*width: 150px;*/
+}
+
+span.menu_nom {
+	display: inline-block;
+	text-align: left;
+	white-space: nowrap;
+	width: 100px;
+}
+
+.clearfix:after {
+	content: "";
+	clear: both;
+	display: block;
+}
+
+#nav_maintenance {
+	text-decoration: none;
+	padding: 5px 0 0 25px;
+	list-style-type: none;
+}
+
+/*-------------  navigation page active --------*/
+body#pageAccueil li#pageContenu,body#pageProduits li#produitsNav,body#pageHK47 li#infosNav,body#pageHK48 li#contactNav
+{
+	background: #BBBBBB;
+	color: #444444;
+}
+
+#messageErreur {
+	width: 500px;
+	display: block;
+	text-align: left;
+	color: red;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-style: italic;
+	font-size: 10pt;
+	float: left;
+}
+/*
+   -------------------------------------------------------------------------------
+   */
+   #uneImage {
+   	float: left;
+   	width: 100px;
+   	border: 1px solid;
+   	border-color: #444;
+   	border-radius: 3px;
+   	margin: 10px;
+   	padding: 0 3px 2px 3px;
+   }
+
+   #titreImage {
+   	text-align: center;
+   	font-size: 0.8em;
+   }
+
+   #authorImage { /*margin: 10px;*/
+   	text-align: center;
+   	font-size: 0.8em;
+   }
+
+   #imageFull {
+   	width: 500px;
+   	-webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 1);
+   	-moz-box-shadow: 0 0 6px rgba(0, 0, 0, 1);
+   	box-shadow: 0 0 6px rgba(0, 0, 0, 1);
+   }
+
+   .imageGalerie {
+   	display: block;
+   	margin-left: auto;
+   	width: 100px;
+   	margin-right: auto;
+   }
+
+   #ajouterCommentaire {
+   	-webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+   	-moz-box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+   	box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
+   	border-left: 0.5em solid #DDD;
+   	margin-left: 75px;
+   	min-height: 50px;
+   	width:80%;
+   	resize: vertical;
+   }
+
+   #fieldImage {
+   	border: 1px solid #444;
+   	border-radius: 3px;
+   }
+/*
+   -------------------------------------------------------------------------------
+   */
+   .crop {
+   	width: 120px;
+   	height: 100 px;
+   	overflow: hidden;
+   }
+/*
+   -------------------------------------------------------------------------------
+   */
+
+   .apropos	{
+   	margin-top:10.0pt;
+   	margin-right:0;
+   	margin-bottom:0;
+   	margin-left:26pt;
+   	margin-bottom:.0001pt;
+   	padding:0cm;
+   	font-size:16.0pt;
+   	font-family:"Calibri Light","sans-serif";
+   	font-variant:small-caps;
+   	color:#444444;
+   	font-weight:normal;
+   }
+
+   .apropos2 {
+
+   	margin-top:6.0pt;
+   	margin-right:0;
+   	margin-bottom:0;
+   	margin-left:26pt;
+   	margin-bottom:9.0pt;
+   	font-size:12.0pt;
+   	font-family:"Calibri Light","sans-serif";
+   	color:#444444;
+   	font-weight:normal;
+   }
+
+   .apropos3
+   	{
+   	margin-top:10pt;
+	margin-right:0;
+	margin-bottom:0;
+	margin-left:14.0pt;
+	line-height:106%;
+	font-size:14.0pt;
+   	font-family:"Calibri Light","sans-serif";
+   	color:#333333;
+	font-variant:small-caps;
+}
