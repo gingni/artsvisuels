@@ -1,5 +1,5 @@
 <?php
-	define('DSN','mysql:host=nicolegingras.ca;dbname=nicolegi_artsvisuels');
-	define('USAGER','nicolegi_gingni');
-	define('MOTPASSE','^OktqziEGV,!');
+	define('DSN','mysql:host=localhost;dbname=nicolegi_artsvisuels');
+	define('USAGER','root');
+	define('MOTPASSE','');
 	define('BASEDONNEES','nicolegi_artsvisuels');
